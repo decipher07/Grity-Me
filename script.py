@@ -3,6 +3,9 @@ from dotenv import load_dotenv
 from selenium.webdriver import ActionChains
 import os 
 import time 
+import sys 
+
+repoName = sys.argv[1]
 
 BASEDIR = os.path.abspath(os.path.dirname(__file__))
 load_dotenv(os.path.join(BASEDIR, '.env'))
@@ -12,7 +15,7 @@ login = os.getenv("LOGIN")
 
 browser = webdriver.Chrome(executable_path='/home/nopc/Downloads/chromedriver_linux64/chromedriver')
 
-repoName = 'https://github.com/crusher-pb/Repository1'
+#repoName = 'https://github.com/crusher-pb/Repository1'
 
 browser.get(repoName)
 
@@ -68,3 +71,5 @@ issueBody.send_keys("Body: Bot Body Part 2 !!! ")
 submitButton = browser.find_element_by_xpath('//*[@id="new_issue"]/div/div/div[1]/div/div[1]/div[2]/button')
 
 submitButton.click()
+
+print("Script Executed Successfully !!!!")
