@@ -2,6 +2,7 @@ from selenium import webdriver
 from dotenv import load_dotenv
 from selenium.webdriver import ActionChains
 import os 
+import time 
 
 BASEDIR = os.path.abspath(os.path.dirname(__file__))
 load_dotenv(os.path.join(BASEDIR, '.env'))
@@ -29,3 +30,7 @@ passCred.send_keys(pwd)
 signin = browser.find_element_by_xpath('//*[@id="login"]/form/div[4]/input[9]')
 
 signin.click()
+
+
+time.sleep(100)
+
