@@ -12,7 +12,9 @@ login = os.getenv("LOGIN")
 
 browser = webdriver.Chrome(executable_path='/home/nopc/Downloads/chromedriver_linux64/chromedriver')
 
-browser.get('https://github.com/decipher07/Grity-Me')
+repoName = 'https://github.com/crusher-pb/Repository1'
+
+browser.get(repoName)
 
 elem = browser.find_element_by_link_text('Sign in')
 
@@ -38,20 +40,28 @@ issues = browser.find_element_by_xpath('//*[@id="js-repo-pjax-container"]/div[2]
 
 issues.click()
 
+# //*[@id="js-repo-pjax-container"]/div[3]/div/div/div[1]/div[2]/a/span[1]
+# //*[@id="js-repo-pjax-container"]/div[3]/div/div/div[2]/div[2]/a/span[1]
+# //*[@id="js-repo-pjax-container"]/div[3]/div/div/div[2]/div[2]/a
 
-newIssue = browser.find_element_by_xpath('//*[@id="js-repo-pjax-container"]/div[3]/div/div/div[2]/div[2]/a/span[1]')
+# newIssue = browser.find_element_by_xpath('//*[@id="js-repo-pjax-container"]/div[3]/div/div/div[1]/div[2]/a/span[1]')
 
-newIssue.click()
+
+# newIssue.click()
+
+raisingIssue = repoName + '/issues/new/choose'
+
+browser.get(raisingIssue)
 
 # <input class="form-control input-lg input-block input-contrast required title js-session-resumable js-quick-submit" required="required" autofocus="autofocus" autocomplete="off" placeholder="Title" aria-label="Title" data-repository-id="MDEwOlJlcG9zaXRvcnkyNzg0MjU0NDc=" type="text" name="issue[title]" id="issue_title">
 issueTitle = browser.find_element_by_id('issue_title')
 
-issueTitle.send_keys("Title : I am a Bot !!! ")
+issueTitle.send_keys("Title : I am a Bot Part 1  !!! ")
 
 # <textarea name="issue[body]" id="issue_body" placeholder="Leave a comment" aria-label="Comment body" data-replace-attribute="id" data-replace-attribute-template="new_comment_$id_field" class="form-control input-contrast comment-form-textarea js-comment-field js-paste-markdown js-task-list-field js-quick-submit js-size-to-fit js-session-resumable js-saved-reply-shortcut-comment-field" style="max-height: 298px; height: 198px;"></textarea>
 
 issueBody = browser.find_element_by_id('issue_body')
-issueBody.send_keys("Body: Bot Body !!! ")
+issueBody.send_keys("Body: Bot Body Part 2 !!! ")
 
 # //*[@id="new_issue"]/div/div/div[1]/div/div[1]/div[2]/button
 
