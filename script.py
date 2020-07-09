@@ -53,3 +53,8 @@ issueTitle.send_keys("Title : I am a Bot !!! ")
 issueBody = browser.find_element_by_id('issue_body')
 issueBody.send_keys("Body: Bot Body !!! ")
 
+# //*[@id="new_issue"]/div/div/div[1]/div/div[1]/div[2]/button
+
+submitButton = browser.find_element_by_xpath('//*[@id="new_issue"]/div/div/div[1]/div/div[1]/div[2]/button')
+
+submitButton.click()
