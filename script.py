@@ -32,5 +32,8 @@ signin = browser.find_element_by_xpath('//*[@id="login"]/form/div[4]/input[9]')
 signin.click()
 
 
-time.sleep(100)
+# time.sleep(120)
 
+issues = browser.find_element_by_xpath('//*[@id="js-repo-pjax-container"]/div[2]/nav/ul/li[2]/a/span')
+
+issues.click()
