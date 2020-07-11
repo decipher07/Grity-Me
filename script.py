@@ -5,7 +5,7 @@ import os
 import time 
 import sys 
 
-repoName = sys.argv[1]
+# repoName = sys.argv[1]
 
 BASEDIR = os.path.abspath(os.path.dirname(__file__))
 load_dotenv(os.path.join(BASEDIR, '.env'))
@@ -13,9 +13,9 @@ load_dotenv(os.path.join(BASEDIR, '.env'))
 pwd = os.getenv("PWDI")
 login = os.getenv("LOGIN")
 
-browser = webdriver.Chrome(executable_path='/home/nopc/Downloads/chromedriver_linux64/chromedriver')
+browser = webdriver.Chrome(executable_path='./chromedriver')
 
-#repoName = 'https://github.com/crusher-pb/Repository1'
+repoName = 'https://github.com/crusher-pb/Repository1'
 
 browser.get(repoName)
 
