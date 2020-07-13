@@ -14,6 +14,7 @@ pwd = os.getenv("PWDI")
 login = os.getenv("LOGIN")
 
 browser = webdriver.Chrome(executable_path='./chromedriver')
+browser.maximize_window()
 
 repoName = 'https://github.com/crusher-pb/Repository1'
 
