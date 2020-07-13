@@ -5,7 +5,6 @@ const {
 const app = express()
 const PORT = process.env.PORT || 3000;
 const fetch = require('node-fetch');
-const { spawn } = require('child_process');
 require('dotenv').config();
 const file = require('./TestIssues.json');
 const user = 'ceceliacreates';
